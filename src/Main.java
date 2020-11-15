@@ -1,5 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -22,9 +20,11 @@ public class Main {
 					System.out.println("Загаданное число больше.");
 				if (userNum == a) {
 					System.out.println("Вы угадали!");
+					i = 0;
 				}
-				if (i == 1) {
+				if (i == 1 && userNum != a) {
 					System.out.println("Вы не угадали!");
+					System.out.println("Загаданное число: " + a);
 				}
 			}
 			System.out.println("Сыграете ещё раз? 0 - нет  1 - да");
